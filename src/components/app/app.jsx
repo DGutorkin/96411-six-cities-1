@@ -1,0 +1,9 @@
+import React from "react";
+import Main from '../../components/main/main.jsx';
+
+const App = () => {
+  return <div>
+    <Main />
+  </div>;
+};
+export default App;
