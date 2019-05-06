@@ -3,13 +3,9 @@ import Main from '../../components/main/main.jsx';
 import PropTypes from "prop-types";
 
 
-const App = (props) => {
-  App.propTypes = {
-    cardsData: PropTypes.array
-  };
+const App = (props) => <Main cardsData={props.cardsData} />;
 
-  return <div>
-    <Main cardsData={props.cardsData} />
-  </div>;
+App.propTypes = {
+  cardsData: PropTypes.array
 };
 export default App;
