@@ -3,16 +3,6 @@ import PropTypes from "prop-types";
 
 const PlaceCard = (props) => {
 
-  PlaceCard.propTypes = {
-    premium: PropTypes.bool,
-    image: PropTypes.string.isRequired,
-    price: PropTypes.number.isRequired,
-    bookmarked: PropTypes.bool,
-    rating: PropTypes.number.isRequired,
-    name: PropTypes.string.isRequired,
-    type: PropTypes.string.isRequired
-  };
-
   const bookmarkClasses = [`place-card__bookmark-button`, `button`];
   if (props.bookmarked) {
     bookmarkClasses.push(`place-card__bookmark-button--active`);
@@ -51,4 +41,15 @@ const PlaceCard = (props) => {
     </div>
   </article>;
 };
+
+PlaceCard.propTypes = {
+  premium: PropTypes.bool,
+  image: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
+  bookmarked: PropTypes.bool,
+  rating: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired
+};
+
 export default PlaceCard;

@@ -4,11 +4,7 @@ import PropTypes from "prop-types";
 import PlaceCard from '../../components/place-card/place-card.jsx';
 
 const Main = (props) => {
-  Main.propTypes = {
-    cardsData: PropTypes.array
-  };
-
-  return <div>
+  return <React.Fragment>
     <div style={{display: `none`}}>
       <svg xmlns="http://www.w3.org/2000/svg">
         <symbol id="icon-arrow-select" viewBox="0 0 7 4">
@@ -127,6 +123,11 @@ const Main = (props) => {
       </div>
 
     </main>
-  </div>;
+  </React.Fragment>;
 };
+
+Main.propTypes = {
+  cardsData: PropTypes.array
+};
+
 export default Main;
