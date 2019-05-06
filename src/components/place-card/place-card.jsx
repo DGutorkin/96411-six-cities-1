@@ -4,9 +4,14 @@ import PropTypes from "prop-types";
 const PlaceCard = (props) => {
 
   const bookmarkClasses = [`place-card__bookmark-button`, `button`];
+  const activeBookmarkClass = `place-card__bookmark-button--active`;
   if (props.bookmarked) {
-    bookmarkClasses.push(`place-card__bookmark-button--active`);
+    bookmarkClasses.push(activeBookmarkClass);
   }
+
+  const bookmarkClickHandler = props.onClickBookmark
+    ? props.onClickBookmark
+    : (evt) => evt.currentTarget.classList.toggle(activeBookmarkClass);
 
   return <article className="cities__place-card place-card">
     {props.premium ? <div className="place-card__mark"> <span>Premium</span></div> : ``}
@@ -21,7 +26,7 @@ const PlaceCard = (props) => {
           <b className="place-card__price-value">&euro;{props.price}</b>
           <span className="place-card__price-text">&#47;&nbsp;night</span>
         </div>
-        <button className={bookmarkClasses.join(` `)} type="button">
+        <button className={bookmarkClasses.join(` `)} onClick={ bookmarkClickHandler } type="button">
           <svg className="place-card__bookmark-icon" width="18" height="19">
             <use xlinkHref="#icon-bookmark"></use>
           </svg>
@@ -49,7 +54,8 @@ PlaceCard.propTypes = {
   bookmarked: PropTypes.bool,
   rating: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
-  type: PropTypes.string.isRequired
+  type: PropTypes.string.isRequired,
+  onClickBookmark: PropTypes.func
 };
 
 export default PlaceCard;
