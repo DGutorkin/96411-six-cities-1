@@ -9,15 +9,11 @@ const PlaceCard = (props) => {
     bookmarkClasses.push(activeBookmarkClass);
   }
 
-  const bookmarkClickHandler = props.onClickBookmark
-    ? props.onClickBookmark
-    : (evt) => evt.currentTarget.classList.toggle(activeBookmarkClass);
-
-  return <article className="cities__place-card place-card">
+  return <article className="cities__place-card place-card" data-offerid={props.id}>
     {props.premium ? <div className="place-card__mark"> <span>Premium</span></div> : ``}
     <div className="cities__image-wrapper place-card__image-wrapper">
       <a href="#">
-        <img className="place-card__image" src={props.image} width="260" height="200" alt="Place image" />
+        <img className="place-card__image" src={props.image} width="260" height="200" alt="Place image" onClick={props.handleClick}/>
       </a>
     </div>
     <div className="place-card__info">
@@ -26,7 +22,7 @@ const PlaceCard = (props) => {
           <b className="place-card__price-value">&euro;{props.price}</b>
           <span className="place-card__price-text">&#47;&nbsp;night</span>
         </div>
-        <button className={bookmarkClasses.join(` `)} onClick={ bookmarkClickHandler } type="button">
+        <button className={bookmarkClasses.join(` `)} onClick={ (evt) => evt.currentTarget.classList.toggle(activeBookmarkClass) } type="button">
           <svg className="place-card__bookmark-icon" width="18" height="19">
             <use xlinkHref="#icon-bookmark"></use>
           </svg>
@@ -48,6 +44,7 @@ const PlaceCard = (props) => {
 };
 
 PlaceCard.propTypes = {
+  id: PropTypes.number.isRequired,
   premium: PropTypes.bool,
   image: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
@@ -55,7 +52,7 @@ PlaceCard.propTypes = {
   rating: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
-  onClickBookmark: PropTypes.func
+  handleClick: PropTypes.func
 };
 
 export default PlaceCard;

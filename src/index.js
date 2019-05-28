@@ -2,10 +2,10 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 import App from './components/app/app.jsx';
-import {cardsData} from './data.js';
+import {offers} from './mocks/offers.js';
 
 
 ReactDOM.render(
-    <App cardsData={cardsData} />,
+    <App offers={offers} />,
     document.querySelector(`#root`)
 );

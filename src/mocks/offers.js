@@ -1,4 +1,5 @@
-export const cardsData = [{
+export const offers = [{
+  id: 1,
   premium: true,
   image: `img/apartment-01.jpg`,
   price: 120,
@@ -7,6 +8,7 @@ export const cardsData = [{
   name: `Beautiful & luxurious apartment at great location`,
   type: `Apartment`
 }, {
+  id: 2,
   premium: false,
   image: `img/room.jpg`,
   price: 80,
@@ -15,6 +17,7 @@ export const cardsData = [{
   name: `Wood and stone place`,
   type: `Private room`
 }, {
+  id: 3,
   premium: false,
   image: `img/apartment-02.jpg`,
   price: 132,
@@ -23,6 +26,7 @@ export const cardsData = [{
   name: `Canal View Prinsengracht`,
   type: `Apartment`
 }, {
+  id: 4,
   premium: true,
   image: `img/apartment-03.jpg`,
   price: 180,
@@ -31,6 +35,7 @@ export const cardsData = [{
   name: `Nice, cozy, warm big bed apartment`,
   type: `Apartment`
 }, {
+  id: 5,
   premium: false,
   image: `img/room.jpg`,
   price: 80,

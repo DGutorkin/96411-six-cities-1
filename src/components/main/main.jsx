@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import PlaceCard from '../../components/place-card/place-card.jsx';
+import PlacesList from '../places-list/places-list.jsx';
 
 const Main = (props) => {
   return <React.Fragment>
@@ -101,20 +101,7 @@ const Main = (props) => {
               </ul>
 
             </form>
-            <div className="cities__places-list places__list tabs__content">
-              {props.cardsData.map((card, index) => {
-                return <PlaceCard
-                  premium={card.premium}
-                  image={card.image}
-                  price={card.price}
-                  bookmarked={card.bookmarked}
-                  rating={card.rating}
-                  name={card.name}
-                  type={card.type}
-                  key={index}
-                />;
-              })}
-            </div>
+            <PlacesList offers={props.offers}/>
           </section>
           <div className="cities__right-section">
             <section className="cities__map map"></section>
@@ -127,7 +114,7 @@ const Main = (props) => {
 };
 
 Main.propTypes = {
-  cardsData: PropTypes.array
+  offers: PropTypes.array
 };
 
 export default Main;

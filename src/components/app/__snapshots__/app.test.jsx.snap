@@ -263,6 +263,7 @@ Array [
           >
             <article
               className="cities__place-card place-card"
+              data-offerid={1}
             >
               <div
                 className="place-card__mark"
@@ -282,6 +283,7 @@ Array [
                     alt="Place image"
                     className="place-card__image"
                     height="200"
+                    onClick={[Function]}
                     src="img/apartment-01.jpg"
                     width="260"
                   />
@@ -368,6 +370,7 @@ Array [
             </article>
             <article
               className="cities__place-card place-card"
+              data-offerid={2}
             >
               
               <div
@@ -380,6 +383,7 @@ Array [
                     alt="Place image"
                     className="place-card__image"
                     height="200"
+                    onClick={[Function]}
                     src="img/room.jpg"
                     width="260"
                   />
@@ -466,6 +470,7 @@ Array [
             </article>
             <article
               className="cities__place-card place-card"
+              data-offerid={3}
             >
               
               <div
@@ -478,6 +483,7 @@ Array [
                     alt="Place image"
                     className="place-card__image"
                     height="200"
+                    onClick={[Function]}
                     src="img/apartment-02.jpg"
                     width="260"
                   />
@@ -564,6 +570,7 @@ Array [
             </article>
             <article
               className="cities__place-card place-card"
+              data-offerid={4}
             >
               <div
                 className="place-card__mark"
@@ -583,6 +590,7 @@ Array [
                     alt="Place image"
                     className="place-card__image"
                     height="200"
+                    onClick={[Function]}
                     src="img/apartment-03.jpg"
                     width="260"
                   />
@@ -669,6 +677,7 @@ Array [
             </article>
             <article
               className="cities__place-card place-card"
+              data-offerid={5}
             >
               
               <div
@@ -681,6 +690,7 @@ Array [
                     alt="Place image"
                     className="place-card__image"
                     height="200"
+                    onClick={[Function]}
                     src="img/room.jpg"
                     width="260"
                   />

@@ -2,18 +2,19 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import PlaceCard from './place-card.jsx';
 
-import {cardsData} from '../../data.js';
+import {offers} from '../../mocks/offers.js';
 
 it(`PlaceCard renders correctly`, () => {
   const tree = renderer
     .create(<PlaceCard
-      premium={cardsData[0].premium}
-      image={cardsData[0].image}
-      price={cardsData[0].price}
-      bookmarked={cardsData[0].bookmarked}
-      rating={cardsData[0].rating}
-      name={cardsData[0].name}
-      type={cardsData[0].type}
+      id={offers[0].id}
+      premium={offers[0].premium}
+      image={offers[0].image}
+      price={offers[0].price}
+      bookmarked={offers[0].bookmarked}
+      rating={offers[0].rating}
+      name={offers[0].name}
+      type={offers[0].type}
     />)
     .toJSON();
   expect(tree).toMatchSnapshot();
