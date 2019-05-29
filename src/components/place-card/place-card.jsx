@@ -9,11 +9,13 @@ const PlaceCard = (props) => {
     bookmarkClasses.push(activeBookmarkClass);
   }
 
-  return <article className="cities__place-card place-card" data-offerid={props.id}>
+  return <article className="cities__place-card place-card">
     {props.premium ? <div className="place-card__mark"> <span>Premium</span></div> : ``}
     <div className="cities__image-wrapper place-card__image-wrapper">
       <a href="#">
-        <img className="place-card__image" src={props.image} width="260" height="200" alt="Place image" onClick={props.handleClick}/>
+        <img className="place-card__image" src={props.image} width="260" height="200" alt="Place image" onClick={() => {
+          props.handleClick(props.id);
+        }}/>
       </a>
     </div>
     <div className="place-card__info">

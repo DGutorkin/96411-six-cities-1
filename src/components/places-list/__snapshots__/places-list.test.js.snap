@@ -6,7 +6,6 @@ exports[`PlacesList renders correctly 1`] = `
 >
   <article
     className="cities__place-card place-card"
-    data-offerid={1}
   >
     <div
       className="place-card__mark"
@@ -113,7 +112,6 @@ exports[`PlacesList renders correctly 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    data-offerid={2}
   >
     
     <div
@@ -213,7 +211,6 @@ exports[`PlacesList renders correctly 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    data-offerid={3}
   >
     
     <div
@@ -313,7 +310,6 @@ exports[`PlacesList renders correctly 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    data-offerid={4}
   >
     <div
       className="place-card__mark"
@@ -420,7 +416,6 @@ exports[`PlacesList renders correctly 1`] = `
   </article>
   <article
     className="cities__place-card place-card"
-    data-offerid={5}
   >
     
     <div

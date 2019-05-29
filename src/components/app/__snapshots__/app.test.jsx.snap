@@ -263,7 +263,6 @@ Array [
           >
             <article
               className="cities__place-card place-card"
-              data-offerid={1}
             >
               <div
                 className="place-card__mark"
@@ -370,7 +369,6 @@ Array [
             </article>
             <article
               className="cities__place-card place-card"
-              data-offerid={2}
             >
               
               <div
@@ -470,7 +468,6 @@ Array [
             </article>
             <article
               className="cities__place-card place-card"
-              data-offerid={3}
             >
               
               <div
@@ -570,7 +567,6 @@ Array [
             </article>
             <article
               className="cities__place-card place-card"
-              data-offerid={4}
             >
               <div
                 className="place-card__mark"
@@ -677,7 +673,6 @@ Array [
             </article>
             <article
               className="cities__place-card place-card"
-              data-offerid={5}
             >
               
               <div

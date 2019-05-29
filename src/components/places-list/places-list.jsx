@@ -33,11 +33,8 @@ class PlacesList extends React.PureComponent {
     </div>;
   }
 
-  _handleClick(evt) {
-    const cardElement = evt.currentTarget.closest(`.place-card`);
-    this.setState({
-      activeCard: parseInt(cardElement.dataset.offerid, 10)
-    });
+  _handleClick(activeCardID) {
+    this.setState({activeCard: activeCardID});
   }
 }
 
