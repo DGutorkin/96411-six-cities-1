@@ -28,6 +28,7 @@ class PlacesList extends React.PureComponent {
           type={offer.type}
           handleClick={this._handleClick}
           key={offer.id}
+          isActive={offer.id === this.state.activeCard}
         />;
       })}
     </div>;

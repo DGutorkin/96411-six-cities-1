@@ -20,6 +20,7 @@ it(`Card is clickable`, () => {
     name={offer.name}
     type={offer.type}
     handleClick={clickHandler}
+    isActive={true}
   />);
 
   const image = card.find(`img`);

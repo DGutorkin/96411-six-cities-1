@@ -15,6 +15,7 @@ it(`PlaceCard renders correctly`, () => {
       rating={offers[0].rating}
       name={offers[0].name}
       type={offers[0].type}
+      isActive={true}
     />)
     .toJSON();
   expect(tree).toMatchSnapshot();
